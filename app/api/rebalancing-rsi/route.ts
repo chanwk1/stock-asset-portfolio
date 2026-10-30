@@ -59,9 +59,14 @@ async function getRsi(ticker: string): Promise<RsiEntry> {
 }
 
 export async function GET(request: NextRequest) {
-  const symbols = [...new Set((request.nextUrl.searchParams.get("symbols") ?? "")
-    .split(",").map(s => s.trim().toUpperCase())
-    .filter(s => /^[A-Z0-9.^=-]{1,15}$/.test(s)))].slice(0, 50);
+const symbols = Array.from(
+  new Set(
+    (request.nextUrl.searchParams.get("symbols") ?? "")
+      .split(",")
+      .map(s => s.trim().toUpperCase())
+      .filter(s => /^[A-Z0-9.^=-]{1,15}$/.test(s))
+  )
+).slice(0, 50);
   const data: RsiEntry[] = [];
   for (let i = 0; i < symbols.length; i += 5) {
     data.push(...await Promise.all(symbols.slice(i, i + 5).map(getRsi)));
