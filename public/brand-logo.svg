@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">SAP — Stock Asset Portfolio</title>
+<desc id="desc">SAP initials over a maroon portfolio chart with an orange segmented ring and rising arrow</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#4a0d27"/>
+    <stop offset=".55" stop-color="#861f41"/>
+    <stop offset="1" stop-color="#a62b55"/>
+  </linearGradient>
+  <linearGradient id="orange" x1="0" y1="1" x2="1" y2="0">
+    <stop stop-color="#d85e12"/>
+    <stop offset="1" stop-color="#ff9a3d"/>
+  </linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#3c0c20" flood-opacity=".34"/></filter>
+  <filter id="textShadow"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#3c0c20" flood-opacity=".55"/></filter>
+</defs>
+<rect x="20" y="20" width="472" height="472" rx="112" fill="url(#bg)" filter="url(#shadow)"/>
+
+<!-- portfolio-chart background -->
+<g opacity=".78">
+  <path d="M260 86a174 174 0 0 0-149 264l53-31a113 113 0 0 1 96-172z" fill="url(#orange)"/>
+  <path d="M100 374a174 174 0 0 0 82 65l25-58a112 112 0 0 1-53-42z" fill="#f07b24"/>
+  <path d="M205 446a174 174 0 0 0 55 9v-63a112 112 0 0 1-35-6z" fill="#ffb36f"/>
+  <g fill="#fff">
+    <rect x="158" y="327" width="35" height="65" rx="7" opacity=".54"/>
+    <rect x="211" y="292" width="35" height="100" rx="7" opacity=".62"/>
+    <rect x="264" y="245" width="35" height="147" rx="7" opacity=".7"/>
+    <rect x="317" y="190" width="35" height="202" rx="7" opacity=".78"/>
+  </g>
+  <path d="M126 318c57-20 102-49 141-86 35-33 66-68 109-114" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m345 115 50-16-10 52" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+
+<!-- unmistakable SAP wordmark -->
+<text x="256" y="286" text-anchor="middle" fill="#fff" stroke="#5b1230" stroke-width="7" paint-order="stroke fill" font-family="Arial, Helvetica, sans-serif" font-size="154" font-weight="900" letter-spacing="-14" filter="url(#textShadow)">SAP</text>
+<rect x="130" y="318" width="252" height="7" rx="3.5" fill="#ff9a3d" opacity=".96"/>
+</svg>
